@@ -1,21 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Productivity App</title>
 </head>
+
 <body>
     <div class="main">
         <div class="left__Content">
-            <div class="left__Content--item flow"></div>
-            <div class="left__Content--item weather"></div>
-            <div class="left__Content--item quotes"></div>
+            <div class="left__Content--item flow">
+                <div class="flow__top">
+                    <div class="flow__top--refresh">
+                        <img src="./assets/rotate-right.svg" alt="">
+                    </div>
+                    <div class="flow__top--settings">
+                        <div class="circle--item"></div>
+                        <div class="circle--item"></div>
+                        <div class="circle--item"></div>
+                    </div>
+                </div>
+                <div class="flow__bottom">
+                    <div class="flow__bottom--title">Flow</div>
+                    <div class="flow__bottom--time">44<span>:</span>59</div>
+                    <div class="flow__bottom--workBreak">
+                        <div class="workBreak--item"></div>
+                        <div class="workBreak--item"></div>
+                        <div class="workBreak--item"></div>
+                        <div class="workBreak--item"></div>
+                    </div>
+                    <div class="flow__bottom--start">
+                        <img src="./assets/polygon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="left__Content--item catch-insect">
+                <div class="game-screen" id="game-layer">
+                    <div class="game--title">Catch The Insect</div>
+                    <button class="btn" id="play-game">Play Game</button>
+                </div>
+                <div class="game-screen">
+                    <div class="game--title">What is your "favorite" insect?</div>
+                    <div class="insect__list">
+                        <div class="insect__list--item">
+                            <button class="btn choose-insect">
+                                <div class="insect-name">Fly</div>
+                                <img src="http://pngimg.com/uploads/fly/fly_PNG3946.png" alt="fly">
+                            </button>
+                        </div>
+                        <div class="insect__list--item">
+                            <button class="btn choose-insect">
+                                <div class="insect-name">Mosquito</div>
+                                <img src="http://pngimg.com/uploads/mosquito/mosquito_PNG18175.png" alt="mosquito">
+                            </button>
+                        </div>
+                        <div class="insect__list--item">
+                            <button class="btn choose-insect">
+                                <div class="insect-name">Spider</div>
+                                <img src="http://pngimg.com/uploads/spider/spider_PNG12.png" alt="spider">
+                            </button>
+                        </div>
+                        <div class="insect__list--item">
+                            <button class="btn choose-insect">
+                                <div class="insect-name">Roach</div>
+                                <img src="http://pngimg.com/uploads/roach/roach_PNG12163.png" alt="roach">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="game-play" class="game-screen" style="position: relative;">
+                    <h3 id="time" class="time">Time: 00:00</h3>
+                    <h3 id="score" class="score">Score: 0</h3>
+                </div>
+            </div>
+            <div class="left__Content--item quotes">
+                <div class="progress-bar"></div>
+                <div class="quote-icon quote-left">
+                    <img src="./assets/quote-left.svg" alt="">
+                </div>
+                <div class="quote-icon quote-right">
+                    <img src="./assets/quote-right.svg" alt="">
+                </div>
+                <p class="truly-quote">
+                    Keep your relationships private so you can have more than 1
+                </p>
+                <div class="user">
+                    <img class="user__details--image" src="https://randomuser.me/api/portraits/women/46.jpg" alt="">
+                    <div class="user__details">
+                        <div class="user__details--name">Miyah Myles</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="right__Content">
             <div class="right__Content--item todos"></div>
         </div>
     </div>
+
+    <script src="./js/insect.js"></script>
 </body>
+
 </html>

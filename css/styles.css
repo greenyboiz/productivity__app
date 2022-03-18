@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    text-align: center;
+}
+
+.main {
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background-color: #9DBDFC;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Roboto, sans-serif;
+}
+
+/* Flow */
+
+.flow {
+    width: 30rem;
+    height: 16rem;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.flow .flow__top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.flow .flow__top .flow__top--refresh {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.flow .flow__top .flow__top--settings div {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #9DBDFC;
+    margin-bottom: 2px;
+}
+
+.flow__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.flow__bottom .flow__bottom--title {
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.flow__bottom .flow__bottom--time {
+    font-size: 64px;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.flow__bottom .flow__bottom--time span {
+    margin: 0 1rem;
+}
+
+.flow__bottom .flow__bottom--workBreak {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.flow__bottom .flow__bottom--workBreak .workBreak--item {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #9DBDFC;
+    border: 1px solid #fff;
+}
+
+/* Catch the insect */
+
+.catch-insect {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.game--title {
+    line-height: 1.4;
+    font-family: 'Press Start 2P', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    border: 0;
+    background-color: #fff;
+    color: #516dff;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.game-screen {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #516dff;
+    border-radius: 20px;
+    width: 480px;
+    height: 256px;
+    transition: margin 0.5s ease-out;
+}
+
+.game-screen:first-child {
+    z-index: 9999;
+}
+
+.game-screen:nth-child(2) {
+    z-index: 999;
+}
+
+.game-screen:last-child {
+    z-index: 99;
+}
+
+.game-screen.active {
+    display: none;
+}
+
+.insect__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.insect__list .insect__list--item .insect-name {
+    /* font-family: Roboto, sans-serif; */
+    font-size: 11px;
+}
+
+.insect__list .insect__list--item {
+    margin: 10px;
+}
+
+.choose-insect {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-insect:hover {
+    background-color: #fff;
+    color: #516dff;
+}
+
+.choose-insect:active {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose-insect img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.time,
+.score {
+    position: absolute;
+    top: 0px;
+}
+
+.time {
+    left: 12px;
+}
+
+.score {
+    right: 12px;
+}
+
+.insect {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.insect.caught {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.insect img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Quotes */
+
+.quotes {
+    background-color: #476ce4;
+    color: #fff;
+    border-radius: 20px;
+    padding: 12px;
+    width: 480px;
+    height: 256px;
+    position: relative;
+}
+
+.quote-icon {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 28px;
+    position: absolute;
+    top: 12px;
+}
+
+.quote-right {
+    right: 12px;
+}
+
+.quote-left {
+    left: 12px;
+}
+
+.truly-quote {
+    line-height: 28px;
+    text-align: justify;
+}
+
+.user .user__details--image {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+}
+
+.user .user__details {
+    margin-left: 10px;
+}
+
+.user .user__details--name {
+    margin: 0;
+}
+
+.progress-bar {
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    animation: grow 10s linear infinite;
+    transform-origin: left;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .truly-quote {
+        padding: 20px 30px;
+    }
+
+    .quote-icon {
+        display: none;
+    }
+}
