@@ -18,10 +18,21 @@ body {
 .main {
     /* width: 100vw; */
     /* height: 100vh; */
+    display: flex;
     background-color: #9DBDFC;
     padding: 20px;
     border-radius: 5px;
     font-family: Roboto, sans-serif;
+    width: 70%;
+    margin: auto;
+}
+
+.left__Content {
+    width: 40%;
+}
+
+.right__Content {
+    width: 60%;
 }
 
 /* Flow */
@@ -248,7 +259,7 @@ body {
     color: rgba(255, 255, 255, 0.3);
     font-size: 28px;
     position: absolute;
-    top: 12px;
+    top: 22px;
 }
 
 .quote-right {
@@ -261,7 +272,8 @@ body {
 
 .truly-quote {
     line-height: 28px;
-    text-align: justify;
+    text-align: center;
+    padding: 0 1.5rem;
 }
 
 .user .user__details--image {
@@ -301,4 +313,72 @@ body {
     .quote-icon {
         display: none;
     }
+}
+
+/* Todo */
+
+.todos {
+    font-family: Roboto, san-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.todos__title {
+    color: #AF1A1A;
+    font-size: 10rem;
+    text-align: center;
+    opacity: 0.4;
+    margin-bottom: 2rem;
+}
+
+.todos__form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 400px;
+    margin: 0;
+}
+
+.todos__form .todos__form--input {
+    border: none;
+    color: #444;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+}
+
+.todos__form .todos__form--input::placeholder {
+    color: #d5d5d5;
+}
+
+.todos__form .todos__form--input:focus {
+    outline-color: rgb(179, 131, 226);
+}
+
+.todos__form .todos__form--item {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.todos__form .todos__form--item li {
+    border-top: 1px solid #e5e5e5;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.todos__form .todos__form--item li.completed {
+    color: #b6b6b6;
+    text-decoration: line-through;
+}
+
+.todos__desc {
+    color: #ccc;
+    margin-top: 3rem;
+    text-align: center;
 }
