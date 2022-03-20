@@ -10,25 +10,28 @@ body {
     font-family: Roboto, sans-serif;
     height: 100vh;
     width: 100vw;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     margin: 0;
     text-align: center;
 }
 
 .main {
-    /* width: 100vw; */
-    /* height: 100vh; */
     display: flex;
     background-color: #9DBDFC;
     padding: 20px;
     border-radius: 5px;
     font-family: Roboto, sans-serif;
-    width: 70%;
+    overflow: auto;
     margin: auto;
 }
 
 .left__Content {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .right__Content {
