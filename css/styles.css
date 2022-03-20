@@ -41,70 +41,101 @@ body {
 /* Flow */
 
 .flow {
-    width: 30rem;
-    height: 16rem;
-    background-color: #1E1E1E;
+    width: 480px;
+    height: 256px;
     border-radius: 20px;
     padding: 12px;
-    margin-bottom: 20px;
-}
-
-.flow .flow__top {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.flow .flow__top .flow__top--refresh {
-    margin-right: 0.5rem;
-    cursor: pointer;
-}
-
-.flow .flow__top .flow__top--settings div {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #9DBDFC;
-    margin-bottom: 2px;
-}
-
-.flow__bottom {
+    text-align: center;
+    background-color: #1966b3;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     color: #fff;
+    margin-bottom: 20px;
 }
 
-.flow__bottom .flow__bottom--title {
-    font-size: 24px;
+.flow__top .flow__top--title {
+    font-size: 2rem;
     font-weight: 500;
-    padding-bottom: 1rem;
 }
 
-.flow__bottom .flow__bottom--time {
-    font-size: 64px;
+.flow__top .flow__top--mode {
+    font-size: 1rem;
+    padding: 12px;
+    background: #151932;
+    border-radius: 30px;
+}
+
+.flow__top .flow__top--mode .mode-item {
+    margin-right: 0.5em;
+    text-decoration: none;
     font-weight: 500;
-    padding-bottom: 1rem;
+    color: #484c67;
+    transition: all 300ms ease-out;
 }
 
-.flow__bottom .flow__bottom--time span {
-    margin: 0 1rem;
+.flow__top .flow__top--mode .mode-item.active {
+    padding: 0.5rem;
+    border-radius: 50px;
+	background-color: #fa6f71;
+    color: #1c2244;
 }
 
-.flow__bottom .flow__bottom--workBreak {
-    display: flex;
-    justify-content: space-between;
-    width: 15%;
-    align-items: center;
-    padding-bottom: 2rem;
+.flow__top .flow__top--mode .mode-item:last-child { 
+    margin-right: 0; 
 }
 
-.flow__bottom .flow__bottom--workBreak .workBreak--item {
-    width: 10px;
-    height: 10px;
+.flow__top .flow__top--start {
+    background: royalblue;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.flow__bottom {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background-color: #9DBDFC;
-    border: 1px solid #fff;
+    text-align: center;
+}
+
+.flow__bottom .flow__bottom--pomodoro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0.5rem 0;
+    text-align: center;
+    border-radius: 50%;
+    background: #151932;
+    box-shadow: 50px 50px 82px #0e1021, -50px -50px 82px #1c2244;
+}
+
+.flow__bottom .flow__bottom--pomodoro::before {
+    content: '';
+    position: absolute;
+    border: 10px solid royalblue;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.flow__bottom .flow__bottom--pomodoro .pomodoro__time {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.flow__bottom .flow__bottom--pomodoro .pomodoro__state {
+    font-size: 1rem;
+    margin-top: 0.5em;
+    padding-left: 0.5em;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
 }
 
 /* Catch the insect */
@@ -144,7 +175,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #516dff;
+    background-color: #ec6e33;
     border-radius: 20px;
     width: 480px;
     height: 256px;
@@ -249,7 +280,7 @@ body {
 /* Quotes */
 
 .quotes {
-    background-color: #476ce4;
+    background-color: #5bb24d;
     color: #fff;
     border-radius: 20px;
     padding: 12px;
@@ -373,6 +404,7 @@ body {
     cursor: pointer;
     font-size: 1.5rem;
     padding: 1rem 2rem;
+    color: #000;
 }
 
 .todos__form .todos__form--item li.completed {

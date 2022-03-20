@@ -14,26 +14,19 @@
         <div class="left__Content">
             <div class="left__Content--item flow">
                 <div class="flow__top">
-                    <div class="flow__top--refresh">
-                        <img src="./assets/rotate-right.svg" alt="">
+                    <div class="flow__top--title">Flow</div>
+                    <div class="flow__top--mode">
+                        <a href="#" class="mode-item" data-time="1500">flow</a>
+                        <a href="#" class="mode-item" data-time="300">short break</a>
+                        <a href="#" class="mode-item" data-time="900">long break</a>
                     </div>
-                    <div class="flow__top--settings">
-                        <div class="circle--item"></div>
-                        <div class="circle--item"></div>
-                        <div class="circle--item"></div>
+                    <div class="flow__top--start start-message">
+                        <span>Select a mode to getting started</span>
                     </div>
                 </div>
                 <div class="flow__bottom">
-                    <div class="flow__bottom--title">Flow</div>
-                    <div class="flow__bottom--time">44<span>:</span>59</div>
-                    <div class="flow__bottom--workBreak">
-                        <div class="workBreak--item"></div>
-                        <div class="workBreak--item"></div>
-                        <div class="workBreak--item"></div>
-                        <div class="workBreak--item"></div>
-                    </div>
-                    <div class="flow__bottom--start">
-                        <img src="./assets/polygon.svg" alt="">
+                    <div class="flow__bottom--pomodoro">
+                        <h1 class="pomodoro__time"></h1>
                     </div>
                 </div>
             </div>
@@ -98,10 +91,10 @@
         <div class="right__Content">
             <div class="right__Content--item todos">
                 <div class="todos__title">TODOS</div>
-                <div id="form" class="todos__form">
+                <form id="form" class="todos__form">
                     <input type="text" class="todos__form--input" id="input-todo" placeholder="Enter your todo" autocomplete="off">
-                    <div class="todos__form--item" id="todo-item"></div>
-                </div>
+                    <ul class="todos__form--item" id="todo-item"></ul>
+                </form>
                 <div class="todos__desc">Left click to toggle completed. <br/>Right click to delete todo</div>
             </div>
         </div>
@@ -109,5 +102,7 @@
 
     <script src="./js/insect.js"></script>
     <script src="./js/quotes.js"></script>
+    <script src="./js/todos.js"></script>
+    <script src="./js/flow.js"></script>
 </body>
 </html>
