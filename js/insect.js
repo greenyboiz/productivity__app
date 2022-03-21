@@ -5,6 +5,7 @@ const startBtn = document.getElementById('play-game');
 const gamePlay = document.getElementById('game-play');
 const scoreEle = document.getElementById('score');
 const timeEle = document.getElementById('time');
+const fullScreen = document.getElementById('main');
 let seconds = 0;
 let score = 0;
 let selectedInsect = {};
@@ -44,11 +45,12 @@ function createInsect() {
 }
 
 function getRandomLocation() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    console.log(width)
-    const x = Math.random() * (width - 200) + 100;
-    const y = Math.random() * (height - 200) + 100;
+    const width = window.innerWidth - 200;
+    const height = window.innerHeight - 200;
+    console.log(height)
+    const x = Math.random() * width + 100;
+    const y = Math.random() * height + 100;
+    console.log(y)
     return {
         x,
         y
@@ -78,7 +80,7 @@ function timeCounting() {
     let m = Math.floor(seconds / 60);
     let s = seconds % 60;
     m = m < 10 ? `0${m}` : m;
-    s = s < 10 ? `0${m}` : s;
+    s = s < 10 ? `0${s}` : s;
     timeEle.innerHTML = `Time: ${m}:${s}`;
     seconds++;
 }
